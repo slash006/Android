@@ -26,9 +26,7 @@ public class CalculatorActivity extends AppCompatActivity {
     public void keyClicked(View view) {
 
         Button button = (Button) view;
-
         String key = button.getText().toString();
-
         TextView displayTextView = (TextView) findViewById(R.id.textView2);
 
 
@@ -52,22 +50,49 @@ public class CalculatorActivity extends AppCompatActivity {
                 display += key;
                 break;
 
+            case ".":
+                if(!display.contains("."))
+                    display += key;
+                break;
+
             case "+":
             case "-":
                 calculateOperation(key);
                 break;
             
             case "=":
-
-
                 calculateResult();
                 break;
+
+            case "CE":
+                clearOne();
+                break;
+            case "C":
+                clearAll();
+                break;
+
 
 
         }
 
         displayTextView.setText(display);
 
+    }
+
+    private void clearAll() {
+
+        display = "0";
+        accumulator = 0.0;
+        currentOperation = Operation.NONE;
+    }
+
+    private void clearOne() {
+
+        if(display.length() > 1)
+            display = display.substring(0, display.length() - 1);
+        else {
+            display = "0";
+        }
     }
 
     private void calculateResult() {

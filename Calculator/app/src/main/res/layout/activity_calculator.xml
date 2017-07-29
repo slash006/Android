@@ -113,7 +113,8 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="6" />
+                    android:text="6"
+                    style="@style/KeyStyle" />
 
                 <Button
                     android:id="@+id/button2"
