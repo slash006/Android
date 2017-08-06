@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context="com.example.adam.calculator.CalculatorActivity">
 
     <RelativeLayout
@@ -18,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="end"
+            android:paddingRight="20dip"
             android:text="0"
             android:textSize="30sp"
             tools:layout_editor_absoluteX="8dp"
@@ -28,16 +30,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="10dp">
 
         <TableLayout
             android:id="@+id/tableView"
+            style="@style/KeyStyle"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="false"
             android:layout_below="@+id/textView2"
             android:shrinkColumns="0,1,2,3"
-            android:stretchColumns="0,1,2,3"
-            style="@style/KeyStyle">
+            android:stretchColumns="0,1,2,3">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -45,41 +47,45 @@
 
                 <Button
                     android:id="@+id/button1"
+                    style="@style/KeyStyle"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="1"
-                    style="@style/KeyStyle" />
+                    android:background="#c7e1ea"
+                    android:text="1" />
 
                 <Button
                     android:id="@+id/button6"
+                    style="@style/KeyStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="2"
-                    style="@style/KeyStyle" />
+                    android:background="#c7e1ea"
+                    android:text="2" />
 
                 <Button
                     android:id="@+id/button3"
+                    style="@style/KeyStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="3"
-                    style="@style/KeyStyle" />
+                    android:background="#c7e1ea"
+                    android:text="3" />
 
                 <Button
                     android:id="@+id/button"
+                    style="@style/KeyStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="CE"
-                    style="@style/KeyStyle" />
+                    android:background="@android:color/darker_gray"
+                    android:text="CE" />
             </TableRow>
 
             <TableRow
@@ -88,43 +94,47 @@
 
                 <Button
                     android:id="@+id/button4"
+                    style="@style/KeyStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="4"
-                    style="@style/KeyStyle" />
+                    android:background="#c7e1ea"
+                    android:text="4" />
 
                 <Button
                     android:id="@+id/button9"
+                    style="@style/KeyStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="5"
-                    style="@style/KeyStyle" />
+                    android:background="#c7e1ea"
+                    android:text="5" />
 
                 <Button
                     android:id="@+id/button8"
+                    style="@style/KeyStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="6"
-                    style="@style/KeyStyle" />
+                    android:background="#c7e1ea"
+                    android:text="6" />
 
                 <Button
                     android:id="@+id/button2"
+                    style="@style/KeyStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="C"
-                    style="@style/KeyStyle" />
+                    android:background="@android:color/darker_gray"
+                    android:text="C" />
             </TableRow>
 
             <TableRow
@@ -133,35 +143,39 @@
 
                 <Button
                     android:id="@+id/button13"
+                    style="@style/KeyStyle"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="7"
-                    style="@style/KeyStyle" />
+                    android:background="#c7e1ea"
+                    android:text="7" />
 
                 <Button
                     android:id="@+id/button12"
+                    style="@style/KeyStyle"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="8"
-                    style="@style/KeyStyle" />
+                    android:background="#c7e1ea"
+                    android:text="8" />
 
                 <Button
                     android:id="@+id/button11"
+                    style="@style/KeyStyle"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="9"
-                    style="@style/KeyStyle" />
+                    android:background="#c7e1ea"
+                    android:text="9" />
 
                 <Button
                     android:id="@+id/button3"
+                    style="@style/KeyStyle"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="+"
-                    style="@style/KeyStyle" />
+                    android:background="@android:color/darker_gray"
+                    android:text="+" />
             </TableRow>
 
             <TableRow
@@ -170,43 +184,47 @@
 
                 <Button
                     android:id="@+id/button16"
+                    style="@style/KeyStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="."
-                    style="@style/KeyStyle" />
+                    android:background="@android:color/darker_gray"
+                    android:text="." />
 
                 <Button
                     android:id="@+id/button15"
+                    style="@style/KeyStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="0"
-                    style="@style/KeyStyle" />
+                    android:background="#c7e1ea"
+                    android:text="0" />
 
                 <Button
                     android:id="@+id/button14"
+                    style="@style/KeyStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="="
-                    style="@style/KeyStyle" />
+                    android:background="@android:color/darker_gray"
+                    android:text="=" />
 
                 <Button
                     android:id="@+id/button4"
+                    style="@style/KeyStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView"
-                    android:text="-"
-                    style="@style/KeyStyle" />
+                    android:background="@android:color/darker_gray"
+                    android:text="-" />
             </TableRow>
         </TableLayout>
     </RelativeLayout>

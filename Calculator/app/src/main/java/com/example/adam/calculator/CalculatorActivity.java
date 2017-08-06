@@ -12,22 +12,48 @@ import static com.example.adam.calculator.R.id.textView2;
 public class CalculatorActivity extends AppCompatActivity {
 
 
+    private static final String DISPLAY_KEY = "display";
+    public static final String ACCUMULATOR_KEY = "accumulator";
+    public static final String OPERATION_KEY = "operation";
     private String display = "0";
     private double accumulator = 0.0;
 
     private Operation currentOperation = Operation.NONE;
+    private TextView displayTextView;
+
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(DISPLAY_KEY, display);
+        outState.putDouble(ACCUMULATOR_KEY, accumulator);
+        outState.putString(OPERATION_KEY, currentOperation.name());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        display = savedInstanceState.getString(DISPLAY_KEY);
+        accumulator = savedInstanceState.getDouble(ACCUMULATOR_KEY);
+        currentOperation = Operation.valueOf(savedInstanceState.getString(OPERATION_KEY));
+
+
+        updateDisplay();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
+
+        displayTextView = (TextView) findViewById(R.id.textView2);
     }
 
     public void keyClicked(View view) {
 
         Button button = (Button) view;
         String key = button.getText().toString();
-        TextView displayTextView = (TextView) findViewById(R.id.textView2);
+
 
 
 //        findViewById(textView2);
@@ -44,7 +70,7 @@ public class CalculatorActivity extends AppCompatActivity {
             case "7":
             case "8":
             case "9":
-                if(display.equals("0")) {
+                if(display.equals("GRYF")) {
                     display = "";
                 }
                 display += key;
@@ -75,8 +101,12 @@ public class CalculatorActivity extends AppCompatActivity {
 
         }
 
-        displayTextView.setText(display);
+        updateDisplay();
 
+    }
+
+    private void updateDisplay() {
+        displayTextView.setText(display);
     }
 
     private void clearAll() {
